@@ -1,0 +1,120 @@
+.modal{
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content form{
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+input, textarea{
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 10px;
+}
+
+input:focus{
+    outline: none;
+}
+
+textarea{
+    resize: none;
+}
+
+
+
+/* ---------------- */
+
+#postCommentsModal .modal-content{
+    margin: 50px auto;
+    width: 500px;
+
+    align-content: center;
+    justify-content: center;
+}
+
+#postCommentsModal .postComments{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 20px;
+    width: 100%;
+    max-height: 300px;
+}
+
+#postCommentsModal .commentContainer{
+    width: 100%;
+    padding: 5px;
+    align-items: start;
+}
+#postCommentsModal .commentUser{
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+#postCommentsModal .commentText{
+    font-size: 10px;
+    width: 100%;
+}
+
+hr{
+    width: 100%;
+    border: 1px solid;
+    border-radius: 100%;
+}
+
+
+
+/* ---------------- */
+
+.userFriend{
+    align-items: center;
+    padding: 10px 16px;
+    border-bottom: 1px solid black;
+}
+
+.userFriend:hover{
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+
+.userFriend img{
+    width: 30px;
+    padding: 10px;
+}
+
+.friendFilter{
+    align-items: center;
+}
+
+.filterError{
+    display: none;
+    color: crimson;
+    font-style: italic;
+    font-size: 0.8em;
+    margin: 0;
+    padding: 0;
+}

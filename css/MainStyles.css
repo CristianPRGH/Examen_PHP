@@ -1,0 +1,28 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: lightcyan;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+.flexRow{
+    display: flex;
+    flex-direction: row;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    column-gap: 20px;
+    row-gap: 30px;
+
+}
+
+.pointer{
+    cursor: pointer;
+}

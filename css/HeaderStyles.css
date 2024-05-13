@@ -1,0 +1,86 @@
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header-main{
+    background-color: cornflowerblue;
+}
+
+.header-content
+{
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.header-content form{
+    align-items: center;
+}
+
+.logoImg{
+    width: 100px;
+}
+
+.header-username{
+    /* border: 1px solid whitesmoke; */
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px black;
+    color: whitesmoke;
+}
+
+.logoutBttn{
+    padding: 10px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-left: 10px;
+    border: 2px solid whitesmoke;
+    border-bottom: 5px solid gray;
+    font-weight: bold;
+    height: 50px;
+}
+
+.logoutBttn:hover{
+    background-color: cornflowerblue;
+    border-bottom: 5px solid whitesmoke;
+}
+
+
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f0fbff;
+    min-width: 200px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.navItem{
+    color: #475053;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+.navItem:hover{
+    background-color: cornflowerblue;
+    color: #f0fbff;
+    font-weight: bold;
+}

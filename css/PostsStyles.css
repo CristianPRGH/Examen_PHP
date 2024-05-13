@@ -1,0 +1,109 @@
+.postsContainer{
+    height: 750px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.postsGrid{
+    overflow-y: scroll;
+    height: 100%;
+
+    justify-content: center;
+}
+
+.gridCell{
+    position: relative;
+    max-height: 500px;
+
+    background-color: whitesmoke;
+    border-bottom: 10px solid rgba(0,0,0,0.2);
+    border-right: 5px solid rgba(0,0,0,0.2);
+    border-radius: 20px;
+    padding: 10px;
+
+    align-items: center;
+    text-align: justify;
+    font-size: 15px;
+}
+
+.gridCell:hover{
+    border-bottom: 10px solid lightcoral;
+    border-right: 5px solid lightcoral;
+}
+
+.cardUser p{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.cardDescription
+{
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.cardImage{
+    width: 200px;
+}
+
+.cardButtons{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    justify-content: space-evenly;
+    outline: none;
+
+    bottom: -10px
+}
+
+.cardButton{
+    /* border-radius: 100%; */
+    border: 0;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    background: none;
+
+    transition: 0.1s;
+}
+
+.postLikes{
+    width: 100%;
+    /* height: 100%; */
+    position: absolute;
+    display: inline-block;
+    margin:0;
+    padding: 0;
+
+    bottom: -10px;
+
+    font-weight: bold;
+    color: blue;
+    text-align: center;
+}
+
+.cardButton img{
+    width: 64px;
+    height: 64px;
+}
+
+.cardButton:hover{
+    transform: scale(1.2);
+    /* background-color: lightcoral;
+    border-bottom: 3px solid darkcyan;
+    border-right: 3px solid darkcyan; */
+}
+
+.cardButton:active{
+    transform: rotate(-30deg);
+}
+
+
+
+
+.cardID{
+    display: none;
+}

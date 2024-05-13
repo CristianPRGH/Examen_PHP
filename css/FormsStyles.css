@@ -1,0 +1,134 @@
+.formContainers{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.formWindows{
+    background-color: whitesmoke;
+    min-width: 500px;
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.forms{
+    background-color: white;
+    width: fit-content;
+    height: 100%;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    padding: 50px;
+
+
+    box-shadow: 2px 2px 5px black;
+}
+
+.fieldsets{
+    width: fit-content;
+    padding: 0;
+    margin: 0;
+    align-items: start;
+    border: 0;
+}
+
+.formData{
+    width: 100%;
+    margin-right: 100px;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.formLabels{
+    width: 150px;
+}
+
+.formInputs{
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.formButtons{
+    padding: 5px;
+    margin: 5px;
+    width: 150px;
+}
+
+#formType{
+    display: none;
+}
+
+.formLines{
+    width: 100%;
+}
+
+.formInputs:focus{
+    outline: none;
+    box-shadow: 2px 2px 5px whitesmoke;
+}
+
+/* .tooltip{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+} */
+
+/* .tooltip-content{
+    visibility: hidden;
+    position: absolute; */
+    /* background-color: whitesmoke; */
+    
+    /* min-width: 200px; */
+    /* padding: 0 16px;
+    z-index: 1;
+    border-radius: 10px; */
+    /* margin-left: 5px;
+    margin-right: 5px; */
+/* } */
+
+.formErrors{
+    display: block;
+    width: 100%;
+    /* margin:25px; */
+    text-wrap: nowrap;
+    /* background: linear-gradient(to right, transparent, whitesmoke, transparent); */
+    color: crimson;
+    text-align: center;
+    /* text-shadow: 0.5px 0.5px 2px black; */
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.required{
+    color: crimson;
+}
+
+/* .tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltip-content {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    /* position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip:hover .tooltip-content {
+    visibility: visible;
+  } */ 
