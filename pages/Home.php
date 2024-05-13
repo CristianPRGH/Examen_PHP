@@ -133,10 +133,15 @@
                     <input type="button" onclick="GetFriends()" value="Buscar">
                 </form>
 
-                <hr>
 
                 <h2>TUS AMIGOS</h2>
+                <hr>
                 <div id="friendsList" class="friendsList flexColumn"></div>
+
+
+                <h2>QUIZÁ CONOZCAS A:</h2>
+                <hr>
+                <div id="suggestedFriendsList" class="friendsList flexColumn"></div>
             </div>
         </div>
 
@@ -227,8 +232,8 @@
         async function GetFriends()
         {
 
-            let filterName = document.getElementsByName("friendName")[0].value;
-            let filterSurname = document.getElementsByName("friendSurname")[0].value;
+            let filterName = document.getElementsByName("friendName")[0].value.trim();
+            let filterSurname = document.getElementsByName("friendSurname")[0].value.trim();
 
             let nameError = document.getElementById("fNameError");
             let surnameError = document.getElementById("fSurnameError");
@@ -237,7 +242,7 @@
             if (filterName.length > 0 && filterName.length < 3)
             {
                 nameError.style.display = "block";
-                error += 1;
+                error = 1;
             }
             else{
                 nameError.style.display = "none";
@@ -246,11 +251,15 @@
             if (filterSurname.length > 0 && filterSurname.length < 3)
             {
                 surnameError.style.display = "block";
-                error += 1;
+                error = 1;
             }
             else{
                 surnameError.style.display = "none";
             }
+
+
+
+
 
             if (error == 0)
             {
@@ -273,26 +282,46 @@
         function SetFriendsList(data)
         {
             let userFriendsList = document.getElementById("friendsList");
-                userFriendsList.innerHTML = "";
+            userFriendsList.innerHTML = "";
 
-                data.forEach(element => {
-                    let friendContainer = document.createElement("div");
-                    friendContainer.setAttribute("class", "userFriend flexRow");
+            data.misamigos.forEach(element => {
+                let friendContainer = document.createElement("div");
+                friendContainer.setAttribute("class", "userFriend flexRow");
 
-                    let friendName = element[1] + " " + element[2];
-                    let fName = document.createTextNode(friendName);
+                let friendName = element[1] + " " + element[2];
+                let fName = document.createTextNode(friendName);
 
-                    let fImg = document.createElement("img");
-                    fImg.setAttribute("src", element[3]);
+                let fImg = document.createElement("img");
+                fImg.setAttribute("src", element[3]);
 
 
-                    friendContainer.appendChild(fImg);
-                    friendContainer.appendChild(fName);
+                friendContainer.appendChild(fImg);
+                friendContainer.appendChild(fName);
 
-                    userFriendsList.appendChild(friendContainer);
-                });
+                userFriendsList.appendChild(friendContainer);
+            });
 
-                OpenModal("friends");
+            let suggestedFriendsList = document.getElementById("suggestedFriendsList");
+            suggestedFriendsList.innerHTML = "";
+
+            data.sugeridos.forEach(element => {
+                let friendContainer = document.createElement("div");
+                friendContainer.setAttribute("class", "userFriend flexRow");
+
+                let friendName = element[1] + " " + element[2];
+                let fName = document.createTextNode(friendName);
+
+                let fImg = document.createElement("img");
+                fImg.setAttribute("src", element[3]);
+
+
+                friendContainer.appendChild(fImg);
+                friendContainer.appendChild(fName);
+
+                suggestedFriendsList.appendChild(friendContainer);
+            });
+
+            OpenModal("friends");
         }
     </script>
 </html>

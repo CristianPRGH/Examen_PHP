@@ -89,6 +89,11 @@ hr{
 
 /* ---------------- */
 
+.friendsList{
+    overflow-y: scroll;
+    height: 300px;
+}
+
 .userFriend{
     align-items: center;
     padding: 10px 16px;
@@ -96,8 +101,7 @@ hr{
 }
 
 .userFriend:hover{
-    background-color: rgba(0, 0, 0, 0.3);
-    color: white;
+    background-color: aliceblue;
 }
 
 
