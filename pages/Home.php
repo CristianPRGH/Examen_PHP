@@ -14,7 +14,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
         <link rel="stylesheet" href="../css/MainStyles.css">
         <link rel="stylesheet" href="../css/PostsStyles.css">
         <link rel="stylesheet" href="../css/ModalStyles.css">
@@ -281,6 +282,8 @@
 
         function SetFriendsList(data)
         {
+
+            // CREA LISTA DE TUS AMIGOS
             let userFriendsList = document.getElementById("friendsList");
             userFriendsList.innerHTML = "";
 
@@ -301,6 +304,8 @@
                 userFriendsList.appendChild(friendContainer);
             });
 
+
+            // CREA LISTA DE AMIGOS SUGERIDOS
             let suggestedFriendsList = document.getElementById("suggestedFriendsList");
             suggestedFriendsList.innerHTML = "";
 
@@ -314,14 +319,28 @@
                 let fImg = document.createElement("img");
                 fImg.setAttribute("src", element[3]);
 
+                let addFriend = document.createElement("i");
+                addFriend.setAttribute("class", "material-icons pointer")
+                addFriend.setAttribute("onclick", "AddFriend('"+element[1]+"')");
+                addFriend.innerHTML = "add_circle";
 
+
+
+                friendContainer.appendChild(addFriend);
                 friendContainer.appendChild(fImg);
                 friendContainer.appendChild(fName);
 
                 suggestedFriendsList.appendChild(friendContainer);
             });
 
+
+            // ABRE EL MODAL DE AMIGOS
             OpenModal("friends");
+        }
+
+        function AddFriend(friendName)
+        {
+            window.location.href = "../php_logic/AddFriend.php?name="+friendName;
         }
     </script>
 </html>

@@ -122,3 +122,17 @@ hr{
     margin: 0;
     padding: 0;
 }
+
+
+.material-icons{
+    color: coral;
+    transition: transform 0.1s;
+    border-radius: 100%;
+    text-align: center;
+    background-color: aliceblue;
+}
+
+.material-icons:hover{
+    /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
+    transform: scale(1.2);
+}

@@ -15,7 +15,7 @@
     position: relative;
     max-height: 500px;
 
-    background-color: whitesmoke;
+    background-color: white;
     border-bottom: 10px solid rgba(0,0,0,0.2);
     border-right: 5px solid rgba(0,0,0,0.2);
     border-radius: 20px;
@@ -78,7 +78,8 @@
     margin:0;
     padding: 0;
 
-    bottom: -10px;
+    top: 30px;
+    left: 15px;
 
     font-weight: bold;
     color: blue;

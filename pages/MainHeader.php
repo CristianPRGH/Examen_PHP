@@ -17,7 +17,7 @@
 <body>
     <div class="header-main">
         <div class="header-content flexRow">
-            <img class="logoImg" src="../images/default_icon.png">
+            <a href="Home.php"><img class="logoImg" src="../images/default_icon.png"></a>
             <h1>RED SOCIAL</h1>
             
             <form method="post" action="" class="flexRow">

@@ -5,6 +5,7 @@ body{
 
 .header-main{
     background-color: cornflowerblue;
+    box-shadow: 5px 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .header-content
@@ -24,11 +25,10 @@ body{
 }
 
 .header-username{
-    /* border: 1px solid whitesmoke; */
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px;
+    border: 2px solid whitesmoke;
+    border-bottom: 0;
+    border-right: 0;
+    padding: 10px 20px;
     box-shadow: 2px 2px 5px black;
     color: whitesmoke;
 }
